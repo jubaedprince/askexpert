@@ -72,7 +72,7 @@
                         processData: false,
                         success: function(data, textStatus, jqXHR)
                         {
-                            $('#expert-profile-picture').attr('src', data.profile_picture_url );
+//                            $('#expert-profile-picture').attr('src', data.profile_picture_url );
                         },
                         error: function (jqXHR, textStatus, errorThrown)
                         {

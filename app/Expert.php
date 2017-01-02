@@ -17,7 +17,7 @@ class Expert extends Model
 
     public function getAlgoliaRecord()
     {
-       
+
         $this->user;
 
         return $this->toArray();

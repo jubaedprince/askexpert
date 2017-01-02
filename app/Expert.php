@@ -15,6 +15,14 @@ class Expert extends Model
 
     protected $appends = ['youtube_video_id'];
 
+    public function getAlgoliaRecord()
+    {
+       
+        $this->user;
+
+        return $this->toArray();
+    }
+
     public function getYoutubeVideoIdAttribute()
     {
         if($this->youtube_video_url){

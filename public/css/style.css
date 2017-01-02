@@ -81,8 +81,13 @@
 	
 }
 
-.expert-caption p{
 
+.expert-caption{
+	height: 135px;
+	overflow:overlay
+}
+
+.expert-caption p{
 	text-align: justify;
 	font-size: 12px;
 	-webkit-hyphens: auto;
@@ -180,4 +185,5 @@ h1{
 	margin-top: -10px;
     font-size: 12px;
 }
+
 

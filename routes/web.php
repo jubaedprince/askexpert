@@ -50,4 +50,7 @@ Route::post('/expert/{expert}/call', 'ExpertController@incrementCallCounter');
 Route::delete('/expert/{expert}/call', 'ExpertController@decrementCallCounter');
 Route::put('/expert/{expert}/profile-picture', 'ExpertController@updateProfilePicture');
 Route::post('/expert/{expert}/meeting', 'MeetingController@store');
+Route::get('/expert/{expert}/edit', 'ExpertController@edit');
+Route::put('/expert/{expert}', 'ExpertController@update');
 
+Route::get('/admin/expert/reindex', 'ExpertController@reindex');

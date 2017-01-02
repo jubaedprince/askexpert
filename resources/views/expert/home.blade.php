@@ -152,8 +152,12 @@
                     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
                         Change Profile Picture
                     </button>
-                </div>
 
+                    <!-- Button trigger modal -->
+                    <a href="/expert/{{\Illuminate\Support\Facades\Auth::user()->expert->id}}/edit" class="btn btn-primary btn-sm">
+                        Edit Profile
+                    </a>
+                </div>
 
             </div>
         </div>

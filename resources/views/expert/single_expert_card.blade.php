@@ -7,10 +7,10 @@
     <div class="expert-title"><p>CEO, Techynaf</p></div>
     <div class="expert-caption">
         <p>
-            Expedia. Freshbooks. Dozens of other companies, large and small. Helping founders, partners, owner-operators, companies and teams get to the next level is my great love and where I have the most fun.
+            {{$expert->bio}}
         </p>
     </div>
-    <button class="btn btn-expert" data-toggle="modal" data-target="#myModal" onClick="setGlobalExpert({{$expert->id}})">Set Meeting Tk.{{$expert->cost_per_hour}}/hour</button>
+    <button class="btn btn-expert" data-toggle="modal" data-target="#myModal" onClick="setGlobalExpert({{$expert->id}})">Set Meeting Tk.{{$expert->cost_per_minute}}/minute</button>
 </div>
 
 <script>

@@ -31,7 +31,7 @@ class ExpertController extends Controller
             'mobile' => 'required',
             'cost_per_minute' => 'required',
             'current_occupation' => 'required',
-            'bio' => 'required'
+            'bio' => 'required|min:218'
         ]);
 
     	//create user
@@ -127,4 +127,41 @@ class ExpertController extends Controller
             'profile_picture_url' =>  $expert->profile_picture_url
         ]);
     }
+
+    public function edit(Expert $expert)
+    {
+        return view('expert.edit', compact('expert'));
+    }
+
+    public function update(Request $request, Expert $expert)
+    {
+        //validate
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'mobile' => 'required',
+            'cost_per_minute' => 'required',
+            'current_occupation' => 'required',
+            'bio' => 'required|min:218',
+            'youtube_video_url' => '',
+        ]);
+
+        $expert->user->name = $request['name'];
+        $expert->user->save();
+        $expert->mobile = $request['mobile'];
+        $expert->cost_per_minute = $request['cost_per_minute'];
+        $expert->current_occupation = $request['current_occupation'];
+        $expert->bio = $request['bio'];
+        $expert->youtube_video_url = $request['youtube_video_url'];
+
+        $expert->save();
+
+        return redirect('/home');
+    }
+
+    public function reindex()
+    {
+        Expert::reindex();
+        return redirect('home');
+    }
+
 }

@@ -180,6 +180,8 @@ return [
 
         Zizaco\Entrust\EntrustServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+
+        AlgoliaSearch\Laravel\AlgoliaServiceProvider::class,
     ],
 
     /*

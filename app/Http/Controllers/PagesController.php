@@ -13,7 +13,8 @@ class PagesController extends Controller
     {
 //    	$services = Service::getDisplayableService(); Not using services at this moment, it will be used as area of expertise
 
-        $experts = Expert::all();
+        $experts = Expert::where('status', 'approved')->get();
+
     	return view('pages.home', compact('experts'));
 	}
 

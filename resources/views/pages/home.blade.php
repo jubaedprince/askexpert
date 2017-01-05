@@ -105,7 +105,7 @@
               </div>
               <div class="row">
                 <h2>Want to see all our experts?</h2>
-                <button class="btn btn-browse-expert">Browse Experts</button>
+                <a href="{{ url('/expert') }}" class="btn btn-browse-expert">Browse Experts</a>
               </div>
           </div>
         </div>

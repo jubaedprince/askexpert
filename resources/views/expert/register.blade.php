@@ -1,5 +1,19 @@
 @extends('layouts.app')
 
+@section('scripts')
+    <script>
+        function countChar(val) {
+            var len = val.value.length;
+            var char_left = 218 - len;
+            if(char_left>0){
+                $('#charNum').text( char_left + " characters left.");
+            }else{
+                $('#charNum').text("You wrote enough :)");
+            }
+
+        };
+    </script>
+@endsection
 @section('content')
 <div class="container">
     <div class="row">
@@ -42,8 +56,10 @@
                             <label for="bio" class="col-md-4 control-label">Bio</label>
 
                             <div class="col-md-6">
-                                <input id="bio" type="text" class="form-control" name="bio" value="{{ old('bio') }}" required autofocus>
-
+                                <textarea onkeyup="countChar(this)" id="bio" class="form-control" name="bio"  required autofocus>
+                                    {{ old('bio') }}
+                                </textarea>
+                                <div id="charNum"></div>
                                 @if ($errors->has('bio'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('bio') }}</strong>

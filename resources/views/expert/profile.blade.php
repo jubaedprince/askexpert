@@ -9,13 +9,24 @@
         <div class="col-md-8 col-md-offset-2 text-center">
             <img class="img-rounded" src="{{$expert->profile_picture_url}}">
             <div class="expert-name">{{$expert->user->name}}</div>
-            <div class="expert-title"><p>CEO, Techynaf</p></div>
+            <div class="expert-title"><p>{{$expert->current_occupation}}</p></div>
             <div class="col-md-8 col-md-offset-2  expert-caption">
                 <p>
-                    Expedia. Freshbooks. Dozens of other companies, large and small. Helping founders, partners, owner-operators, companies and teams get to the next level is my great love and where I have the most fun.
+                    {{$expert->bio}}
                 </p>
             </div>
-            <button class="btn btn-expert">Set Meeting Tk.{{$expert->cost_per_hour}}/hour</button>
+
+            @if($expert->youtube_video_id)
+                <div class="row">
+                    <div class="col-md-9 col-md-offset-2">
+                        <iframe width="640" height="360"
+                                src="https://www.youtube.com/embed/{{$expert->youtube_video_id}}" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            @endif
+
+            <button class="btn btn-expert">Set Meeting Tk.{{$expert->cost_per_minute}}/minute</button>
             <p>If you set a meeting, expert will talk to you now</p>
 
         </div>
@@ -29,9 +40,9 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <h3>Building leadership skills with self development</h3>
+                                <h3>{{$service->title}}</h3>
 
-                                <p>I am focused on providing bla bla this is very important. I am focused on providing bla bla this is very important I am focused on providing bla bla this is very important I am focused on providing bla bla this is very important</p>
+                                <p>{{$service->description}}</p>
                                 @foreach($service->tags as $tag)
                                     <span class="label label-default">{{$tag->name}}</span>
                                 @endforeach
@@ -44,14 +55,4 @@
             @endforeach
         </div>
     </div>
-
-    @if($expert->youtube_video_id)
-        <div class="row">
-            <div class="col-md-9 col-md-offset-2">
-                <iframe width="640" height="360"
-                        src="https://www.youtube.com/embed/{{$expert->youtube_video_id}}" frameborder="0" allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    @endif
 @endsection

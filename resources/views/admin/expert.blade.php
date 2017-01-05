@@ -26,6 +26,7 @@
                         <td>{{$pending_expert->mobile}}</td>
                         <td>{{date('F d, Y', strtotime($pending_expert->created_at)) }}</td>
                         <td>
+                            <a href="{{url('/admin/expert/' . $pending_expert->id)}}" class="btn btn-default btn-xs">View</a>
                             <form action="{{ url('/expert/' . $pending_expert->user->id ) }}" method="POST">
                                 <input type="hidden" name="status" value="approved">
                                 {{ csrf_field() }}
@@ -37,7 +38,8 @@
                                 {{ csrf_field() }}
 
                                 <button type="submit" class="btn btn-danger btn-xs">Decline</button>
-                            </form>   
+                            </form>
+
                         </td>
                     </tr>
                 @endforeach
@@ -78,12 +80,13 @@
                             </td>
                             <td>{{date('F d, Y', strtotime($approved_expert->created_at)) }}</td>
                             <td>
-                            
+                                <a href="{{url('/admin/expert/' . $approved_expert->id)}}" class="btn btn-default btn-xs">View</a>
                                 <form action="{{ url('/expert/' . $approved_expert->user->id ) }}" method="POST">
                                     <input type="hidden" name="status" value="declined">
                                     {{ csrf_field() }}
 
                                     <button type="submit" class="btn btn-danger btn-xs">Decline</button>
+
                                 </form>
                             </td>
                         </tr>
@@ -119,6 +122,7 @@
                                 <td>{{$declined_expert->mobile}}</td>
                                 <td>{{date('F d, Y', strtotime($declined_expert->created_at)) }}</td>
                                 <td>
+                                    <a href="{{url('/admin/expert/' . $declined_expert->id)}}" class="btn btn-default btn-xs">View</a>
                                     <form action="{{ url('/expert/' . $declined_expert->user->id ) }}" method="POST">
                                         <input type="hidden" name="status" value="approved">
                                         {{ csrf_field() }}

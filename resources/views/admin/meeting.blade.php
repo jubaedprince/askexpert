@@ -16,6 +16,7 @@
                     <th>Preferable Date</th>
                     <th>Preferable Time</th>
                     <th>Expert</th>
+                    <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -26,6 +27,7 @@
                         <td>{{$meeting->preferable_date}}</td>
                         <td>{{$meeting->preferable_time}}</td>
                         <td>{{$meeting->expert->user->name}}</td>
+                        <td><a href="{{url('/admin/meeting/' . $meeting->id)}}" class="btn btn-default btn-xs">View</a></td>
                         {{--<td>{{date('F d, Y', strtotime($pending_expert->created_at)) }}</td>--}}
                         {{--<td>--}}
                             {{--<form action="{{ url('/expert/' . $pending_expert->user->id ) }}" method="POST">--}}

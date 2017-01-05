@@ -186,4 +186,9 @@ h1{
     font-size: 12px;
 }
 
+.dropdown:hover .dropdown-menu {
+	display: block;
+	margin-top: 0;
+}
+
 

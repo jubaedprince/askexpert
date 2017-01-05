@@ -33,9 +33,16 @@ Route::post('/expert/{expert_id}', 'ExpertController@changeStatus');
 Route::get('/service/create', 'ServiceController@create');
 Route::post('/service', 'ServiceController@store');
 
+
+
+Route::get('/admin/expert/{expert}', 'ExpertController@adminShow');
+Route::get('/admin/service/{service}', 'ServiceController@adminShow');
+Route::get('/admin/meeting/{meeting}', 'MeetingController@adminShow');
+
 Route::get('/admin/expert', 'AdminController@expertManagement');
 Route::get('/admin/service', 'AdminController@serviceManagement');
 Route::get('/admin/meeting', 'AdminController@meetingManagement');
+
 
 Route::post('/admin/service/{service_id}', 'ServiceController@changeIsApproved');
 Route::get('/expert/', 'ExpertController@index');

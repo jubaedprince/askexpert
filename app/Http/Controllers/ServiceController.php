@@ -20,7 +20,9 @@ class ServiceController extends Controller
             $services = Service::all();
         }
 
-        return view('service.index', compact('services'));
+        $disable_set_meeting = false;
+
+        return view('service.index', compact('services', 'disable_set_meeting'));
 
     }
     public function create()
@@ -87,5 +89,10 @@ class ServiceController extends Controller
         {
             return redirect()->back(); //add message "Couldn't find service"
         }
+    }
+
+    public function adminShow(Request $request, Service $service)
+    {
+        return view('service.show', compact('service'));
     }
 }

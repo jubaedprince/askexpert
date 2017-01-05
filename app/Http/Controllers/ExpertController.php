@@ -12,7 +12,7 @@ class ExpertController extends Controller
 {
     public function index()
     {
-        $experts = Expert::all();
+        $experts = Expert::where('status', 'approved')->get();
         return view('expert.index', compact('experts'));
     }
 
@@ -162,6 +162,12 @@ class ExpertController extends Controller
     {
         Expert::reindex();
         return redirect('home');
+    }
+
+    public function adminShow(Request $request, Expert $expert)
+    {
+
+        return view('expert.profile', compact('expert'));
     }
 
 }

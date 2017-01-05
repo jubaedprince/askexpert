@@ -26,7 +26,7 @@
                         <td>{{$service->short_description}}</td>
                         <td>{{date('F d, Y', strtotime($service->created_at)) }}</td>
                         <td>
-                        <!-- make this approve button functional -->
+                            <a href="{{url('/admin/service/' . $service->id)}}" class="btn btn-default btn-xs">View</a>
                             <form action="{{ url('admin/service/' . $service->id ) }}" method="POST">
                                 <input type="hidden" name="status" value="approved">
                                 {{ csrf_field() }}
@@ -66,7 +66,7 @@
                             <td>{{$service->short_description}}</td>
                             <td>{{date('F d, Y', strtotime($service->created_at)) }}</td>
                             <td>
-                            <!-- make this approve button functional -->
+                                <a href="{{url('/admin/service/' . $service->id)}}" class="btn btn-default btn-xs">View</a>
                                 <form action="{{ url('admin/service/' . $service->id ) }}" method="POST">
                                     <input type="hidden" name="status" value="declined">
                                     {{ csrf_field() }}

@@ -45,9 +45,7 @@
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            @foreach($services as $service)
-                @include('service.single_service_card', ['service'=>$service])
-            @endforeach
+                @include('service.single_service_card', ['service'=>$service, 'disable_set_meeting' => true])
         </div>
     </div>
 @endsection

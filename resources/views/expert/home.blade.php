@@ -162,45 +162,39 @@
             </div>
         </div>
     </div>
-        
-    <h2>Approved Services</h2>    
-    @foreach($approved_services as $service)
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">{{$service->title}}</div>
 
-                    <div class="panel-body">
-                        Short Description{{$service->short_description}} <br>
-                        Long Description{{$service->long_description}} <br>
-                        @foreach($service->tags as $tag)
-                            <span class="label label-default">{{$tag->name}}</span>
-                        @endforeach
-                        Is Approved {{$service->is_approved}}<br>
-                        Is Enabled {{$service->is_enabled}}<br>
-                    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Approved Services</div>
+                <div class="panel-body">
+                    @if(count($approved_services)===0)
+                        <p>No approved service yet.</p>
+                    @endif
+                    @foreach($approved_services as $service)
+                        @include('service.single_service_card', ['service'=>$service,  'disable_set_meeting' => true])
+                    @endforeach
                 </div>
             </div>
         </div>
-    @endforeach
+    </div>
 
-    <h2>Pending Services</h2>    
-    @foreach($pending_services as $service)
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">{{$service->title}}</div>
-
-                    <div class="panel-body">
-                        Short Description{{$service->short_description}} <br>
-                        Long Description{{$service->long_description}} <br>
-                        Is Approved {{$service->is_approved}}<br>
-                        Is Enabled {{$service->is_enabled}}<br>
-                    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Pending Services</div>
+                <div class="panel-body">
+                    @if(count($pending_services)===0)
+                        <p>No pending service yet, add a service</p>
+                    @endif
+                    @foreach($pending_services as $service)
+                        @include('service.single_service_card', ['service'=>$service, 'disable_set_meeting' => true])
+                    @endforeach
                 </div>
             </div>
         </div>
-    @endforeach
+    </div>
+
 </div>
 
 

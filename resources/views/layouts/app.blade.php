@@ -72,7 +72,7 @@
 
 
 
-                        <li><a href="{{ url('/expert') }}">Browse</a></li>
+                        <li><a href="{{ url('/expert') }}">Browse Experts</a></li>
                         <li><a href="{{ url('/contact') }}">Contact</a></li>
                     </ul>
 
@@ -93,7 +93,7 @@
 
                                     <li>
                                         <a href="/home">
-                                            Home
+                                            Profile
                                         </a>
                                     </li>
                                     

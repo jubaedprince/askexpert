@@ -45,4 +45,9 @@ class MeetingController extends Controller
         ]);
 
     }
+
+    public function adminShow(Request $request, Meeting $meeting)
+    {
+        return view('meeting.show', compact('meeting'));
+    }
 }

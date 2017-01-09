@@ -15,6 +15,16 @@ class Expert extends Model
 
     protected $appends = ['youtube_video_id'];
 
+    public function indexOnly($index_name)
+    {
+        if($this->status == 'approved' &&  $this->is_active == true){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
     public function getAlgoliaRecord()
     {
 

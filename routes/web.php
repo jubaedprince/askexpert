@@ -15,6 +15,11 @@
 //     return view('welcome');
 // });
 
+
+Route::get('/admin/expert/reindex', 'ExpertController@reindex');
+Route::get('/admin/service/reindex', 'ServiceController@reindex');
+
+
 Route::get('/', 'PagesController@home');
 
 Auth::routes();
@@ -60,4 +65,4 @@ Route::post('/expert/{expert}/meeting', 'MeetingController@store');
 Route::get('/expert/{expert}/edit', 'ExpertController@edit');
 Route::put('/expert/{expert}', 'ExpertController@update');
 
-Route::get('/admin/expert/reindex', 'ExpertController@reindex');
+Route::post('/search', 'SearchController@search');

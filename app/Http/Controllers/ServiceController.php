@@ -95,4 +95,11 @@ class ServiceController extends Controller
     {
         return view('service.show', compact('service'));
     }
+
+    public function reindex()
+    {
+        Service::reindex();
+        return redirect('home');
+    }
+
 }

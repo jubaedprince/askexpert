@@ -169,6 +169,15 @@
 
     </script>
 
+
+    <script>
+        var EXPERT_ID;
+        function setGlobalExpert(expert_id){
+            EXPERT_ID = expert_id;
+        }
+    </script>
+
+
     <!-- Modal -->
     @include('meeting.book_modal')
     @yield('scripts')

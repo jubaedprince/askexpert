@@ -173,8 +173,17 @@
 
     <script>
         var EXPERT_ID;
-        function setGlobalExpert(expert_id){
+        var EXPERT_RATE;
+        function setGlobalExpert(expert_id, expert_rate){
             EXPERT_ID = expert_id;
+            EXPERT_RATE = expert_rate;
+
+            $('#estimated_duration').html("" +
+                    "<option value='"+ "5 minutes, Tk." + EXPERT_RATE*5  +"'>5 minutes, Tk." + EXPERT_RATE*5 + "</option>" +
+                    "<option  value='"+ "10 minutes, Tk." + EXPERT_RATE*10   +"'>10 minutes, Tk." + EXPERT_RATE*10 + "</option>" +
+                    "<option  value='"+ "15 minutes, Tk." + EXPERT_RATE*15   +"'>15 minutes, Tk." + EXPERT_RATE*15 + "</option>" );
+
+
         }
     </script>
 

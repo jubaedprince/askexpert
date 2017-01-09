@@ -17,7 +17,9 @@
                 <h3 class="service-rate">Tk. {{$service->expert->cost_per_minute}}</h3>
                 <p class="per-minute">per minute</p>
                 @unless($disable_set_meeting)
-                    <button class="btn btn-default get-service">Set a Meeting</button>
+                    <button class="btn btn-default get-service" data-toggle="modal" data-target="#myModal"
+                            onClick="setGlobalExpert({{$service->expert->id}}, {{$service->expert->cost_per_minute}})">Set a Meeting
+                    </button>
                 @endunless
             </div>
         </div>

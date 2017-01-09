@@ -92,7 +92,7 @@
                                                 </div>
                                                 <div class="col-md-3 service-right-section text-center">
                                                     <button class="btn  get-service" data-toggle="modal" data-target="#myModal"
-                                                            onClick="setGlobalExpert({{$expert->id}})">Set a Meeting
+                                                            onClick="setGlobalExpert({{$expert->id}}, {{$expert->cost_per_minute}})">Set a Meeting
                                                     </button>
                                                 </div>
                                             </div>

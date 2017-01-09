@@ -10,5 +10,5 @@
             {{$expert->bio}}
         </p>
     </div>
-    <button class="btn btn-expert" data-toggle="modal" data-target="#myModal" onClick="setGlobalExpert({{$expert->id}})">Set Meeting Tk.{{$expert->cost_per_minute}}/minute</button>
+    <button class="btn btn-expert" data-toggle="modal" data-target="#myModal" onClick="setGlobalExpert({{$expert->id}}, {{$expert->cost_per_minute}})">Set Meeting Tk.{{$expert->cost_per_minute}}/minute</button>
 </div>

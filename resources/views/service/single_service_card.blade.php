@@ -6,7 +6,7 @@
             </div>
             <div class="col-md-7">
                 <h3>{{$service->title}}</h3>
-                <p class="expert-info">{{$service->expert->user->name}}, {{$service->expert->current_occupation}}</p>
+                <p class="expert-info"><a href="/{{$service->expert->slug}}">{{$service->expert->user->name}}</a>, {{$service->expert->current_occupation}}</p>
 
                 <p>{{$service->description}}</p>
                 @foreach($service->tags as $tag)

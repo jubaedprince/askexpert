@@ -6,7 +6,7 @@
 
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#home">Experts</a></li>
-                <li><a data-toggle="tab" href="#menu1">Area of Expertise</a></li>
+                <li><a data-toggle="tab" href="#menu1">Expertise</a></li>
             </ul>
 
             <div class="tab-content">
@@ -24,7 +24,7 @@
                 </div>
                 <div id="menu1" class="tab-pane fade">
                     @if(count($services)==0)
-                        <p>Sorry no area of expertise found.</p>
+                        <p>Sorry no expertise found.</p>
                     @else
                         @foreach($services as $service)
                             @include('service.single_service_card', ['service'=>$service, 'disable_set_meeting' => false])

@@ -120,11 +120,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Services</div>
+                    <div class="panel-heading">Area of Expertise</div>
 
                     <div class="panel-body">
-                        Please add a service
-                        <a href="/service/create" class="btn btn-default">Add Service</a>
+                        Please add a expertise
+                        <a href="/service/create" class="btn btn-default">Add Expertise</a>
                     </div>
                 </div>
             </div>
@@ -166,10 +166,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Approved Services</div>
+                <div class="panel-heading">Approved Expertise</div>
                 <div class="panel-body">
                     @if(count($approved_services)===0)
-                        <p>No approved service yet.</p>
+                        <p>No approved expertise yet.</p>
                     @endif
                     @foreach($approved_services as $service)
                         @include('service.single_service_card', ['service'=>$service,  'disable_set_meeting' => true])
@@ -182,10 +182,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Pending Services</div>
+                <div class="panel-heading">Pending Expertise</div>
                 <div class="panel-body">
                     @if(count($pending_services)===0)
-                        <p>No pending service yet, add a service</p>
+                        <p>No pending expertise yet, add a expertise</p>
                     @endif
                     @foreach($pending_services as $service)
                         @include('service.single_service_card', ['service'=>$service, 'disable_set_meeting' => true])

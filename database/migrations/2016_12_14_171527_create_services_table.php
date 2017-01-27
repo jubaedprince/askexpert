@@ -19,7 +19,7 @@ class CreateServicesTable extends Migration
             $table->foreign('expert_id')->references('id')->on('experts')->onDelete('cascade');
             $table->string('title');
             $table->integer('cost_per_hour');
-            $table->string('description');
+            $table->text('description');
             $table->boolean('is_approved')->default(false);
             $table->boolean('is_enabled')->default(false);
             $table->timestamps();

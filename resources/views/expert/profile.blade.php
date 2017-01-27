@@ -39,7 +39,7 @@
                                     <div class="expert-name">{{$expert->user->name}}</div>
                                     <div class="expert-title"><p>{{$expert->current_occupation}}</p></div>
                                     <button class="btn btn-expert" data-toggle="modal" data-target="#myModal"
-                                            onClick="setGlobalExpert({{$expert->id}})">Set Meeting
+                                            onClick="setGlobalExpert({{$expert->id}}, {{$expert->cost_per_minute}})">Set Meeting
                                         Tk.{{$expert->cost_per_minute}}/minute
                                     </button>
                                     <p class="set-meeting-button-instruction">If you set a meeting, expert will talk to you now</p>
@@ -92,7 +92,7 @@
                                                 </div>
                                                 <div class="col-md-3 service-right-section text-center">
                                                     <button class="btn  get-service" data-toggle="modal" data-target="#myModal"
-                                                            onClick="setGlobalExpert({{$expert->id}}, {{$expert->cost_per_minute}})">Set a Meeting
+                                                            onClick="setGlobalExpert({{$service->expert->id}}, {{$service->expert->cost_per_minute}})">Set a Meeting
                                                     </button>
                                                 </div>
                                             </div>

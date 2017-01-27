@@ -31,7 +31,7 @@ class ExpertController extends Controller
             'mobile' => 'required',
             'cost_per_minute' => 'required',
             'current_occupation' => 'required',
-            'bio' => 'required|min:218'
+            'bio' => 'required|min:150'
         ]);
 
     	//create user
@@ -141,7 +141,7 @@ class ExpertController extends Controller
             'mobile' => 'required',
             'cost_per_minute' => 'required',
             'current_occupation' => 'required',
-            'bio' => 'required|min:218',
+            'bio' => 'required|min:150',
             'youtube_video_url' => '',
         ]);
 

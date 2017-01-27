@@ -4,7 +4,7 @@
     <script>
         function countChar(val) {
             var len = val.value.length;
-            var char_left = 218 - len;
+            var char_left = 150 - len;
             if(char_left>0){
                 $('#charNum').text( char_left + " characters left.");
             }else{

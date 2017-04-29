@@ -1,0 +1,1 @@
+{{$expert->user->name}} joined AskExpert.co.

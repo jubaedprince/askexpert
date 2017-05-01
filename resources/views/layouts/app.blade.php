@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="aeApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,10 +27,10 @@
         ]); ?>
 
     </script>
-        
+
 </head>
 <body>
-    <div id="app">
+    <div id="app" ng-controller="AppController">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -128,12 +128,17 @@
                 </div>
             </div>
         </nav>
-
         @yield('content')
+
+        <ae-modal ng-show="showModal"></ae-modal>
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/angular/app.js"></script>
+
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
 
 
@@ -155,7 +160,7 @@
 
 
     <!-- Modal -->
-    @include('meeting.book_modal')
+    {{--@include('meeting.book_modal')--}}
     @yield('scripts')
 
 </body>

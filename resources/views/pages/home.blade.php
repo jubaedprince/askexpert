@@ -119,8 +119,6 @@
           <div class="row text-center">
           
             <p>We have just launched something special for you. Stay with us!</p>
-            
-               
           </div>
         </div>
       </div>

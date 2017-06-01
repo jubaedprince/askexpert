@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Expert;
+use App\Mail\MeetingRequestReceived;
 use App\Meeting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class MeetingController extends Controller
 {
@@ -39,9 +41,12 @@ class MeetingController extends Controller
         //add service under expert
         $meeting->expert_id = $expert->id;
         $meeting->save();
+
+
+        Mail::to(env('ADMIN_EMAIL', 'jubaedprince@gmail.com'))->send(new MeetingRequestReceived($meeting));
+
         return response()->json([
            'success' => true,
-
         ]);
 
     }

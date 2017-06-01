@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ExpertJoined;
 use Illuminate\Http\Request;
 
 use App\User;
 use App\Role;
 use App\Expert;
+use Illuminate\Support\Facades\Mail;
 
 class ExpertController extends Controller
 {
@@ -67,6 +69,8 @@ class ExpertController extends Controller
             ]
         );
         $user->expert()->save($expert);
+
+        Mail::to(env('ADMIN_EMAIL', 'jubaedprince@gmail.com'))->send(new ExpertJoined($expert));
 
         return view('expert.registration_confirmation');
     }

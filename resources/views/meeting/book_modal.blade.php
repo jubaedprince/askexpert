@@ -25,7 +25,6 @@
         var formData = getFormObj('request-meeting-form');
 //        formData['_token'] =  $('meta[name="csrf-token"]').attr('content');
 //        console.log(formData);
-        console.log();
         $.ajax({
             url : "/expert/"+ EXPERT_ID+ "/meeting",
             type: "POST",

@@ -1,5 +1,5 @@
 <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button ng-click="$ctrl.hideModal()"  type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -9,19 +9,65 @@
                 <form class="form-horizontal" id="request-meeting-form" role="form" method="POST">
 
                     <div class="form-group">
-                        <label for="requestor_name" class="col-md-4 control-label">Your Name</label>
+                        <label class="col-md-4 control-label">Your Name</label>
 
                         <div class="col-md-6">
-                            <input id="requestor_name" type="text" class="form-control" name="requestor_name" required autofocus>
+                            <input ng-model="requestor_name" type="text" class="form-control">
+                            <div ng-show="errorInName">Please enter your name</div>
                         </div>
                     </div>
 
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Your Phone Number</label>
+
+                        <div class="col-md-6">
+                            <input ng-model="requestor_phone_number" type="text" class="form-control">
+                            <div ng-show="errorInPhoneNumber">Please enter your phone number</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Preferable Date</label>
+
+                        <div class="col-md-6">
+                            <input ng-model="preferable_date" type="date" class="form-control">
+                            <div ng-show="errorInDate">Please enter your preferable date</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Preferable Time</label>
+
+                        <div class="col-md-6">
+                            <select ng-model="preferable_time" ng-options="x for x in $ctrl.preferable_times"  class="form-control"></select>
+                            <div ng-show="errorInTime">Please enter your preferable time</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Estimated Duration</label>
+
+                        <div class="col-md-6">
+                            <select ng-model="estimated_duration" ng-options="x for x in $ctrl.estimated_duration"  class="form-control"></select>
+                            <div ng-show="errorInDuration">Please enter your estimated duration</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Discussion Topic</label>
+
+                        <div class="col-md-6">
+                            <textarea ng-model="discussion_topic" class="form-control"></textarea>
+                            <div ng-show="errorInTopic">Please enter your discussion topic</div>
+                        </div>
+                    </div>
                 </form>
 
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary meeting-request-button">Request Now</button>
+                <button type="button" class="btn btn-primary meeting-request-button" ng-click="$ctrl.requestNowClicked()">Request Now</button>
             </div>
         </div>
     </div>

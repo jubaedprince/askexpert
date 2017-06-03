@@ -38,7 +38,7 @@
                                     <img class="img-rounded" src="{{$expert->profile_picture_url}}">
                                     <div class="expert-name">{{$expert->user->name}}</div>
                                     <div class="expert-title"><p>{{$expert->current_occupation}}</p></div>
-                                    <button class="btn btn-expert" data-toggle="modal" data-target="#myModal"
+                                    <button class="btn btn-expert"
                                             ng-click="setMeetingClicked({{$expert->id}})">Set Meeting
                                         Tk.{{$expert->cost_per_minute}}/minute
                                     </button>
@@ -96,18 +96,13 @@
                                                     </button>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
-
-
-
                                 @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

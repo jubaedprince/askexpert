@@ -18,7 +18,7 @@
                 <p class="per-minute">per minute</p>
                 @unless($disable_set_meeting)
                     <button class="btn btn-default get-service" data-toggle="modal" data-target="#myModal"
-                            onClick="setGlobalExpert({{$service->expert->id}}, {{$service->expert->cost_per_minute}})">Set a Meeting
+                            ng-click="setMeetingClicked({{$expert->id}})">Set a Meeting
                     </button>
                 @endunless
             </div>

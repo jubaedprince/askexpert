@@ -44,7 +44,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <img width="170px" src="/images/askexpert_logo.png">
+                    <a  href="{{ url('/') }}" ><img width="170px" src="/images/askexpert_logo.png"></a>
                     {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
                         {{--{{ config('app.name', 'AskExpert') }}--}}
                     {{--</a>--}}

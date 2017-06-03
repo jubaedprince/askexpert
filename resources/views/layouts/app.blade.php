@@ -129,9 +129,9 @@
                 </div>
             </div>
         </nav>
+        <ae-modal ng-show="showModal"></ae-modal>
         @yield('content')
 
-        <ae-modal ng-show="showModal"></ae-modal>
     </div>
 
     <!-- Scripts -->

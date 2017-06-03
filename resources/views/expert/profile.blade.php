@@ -92,7 +92,7 @@
                                                 </div>
                                                 <div class="col-md-3 service-right-section text-center">
                                                     <button class="btn  get-service"
-                                                            onClick="setGlobalExpert({{$service->expert->id}}, {{$service->expert->cost_per_minute}})">Set a Meeting
+                                                            ng-click="setMeetingClicked({{$expert->id}})">Set a Meeting
                                                     </button>
                                                 </div>
                                             </div>

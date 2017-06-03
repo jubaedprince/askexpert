@@ -6,6 +6,7 @@ var aeApp = angular.module('aeApp', []);
 aeApp.factory('Store', () => {
     // hold a local copy of the state, setting its defaults
     var selectedExpert = "0";
+    var selectedExpertCost = 0;
     var showModal = false;
 
 // expose basic getter and setter methods
@@ -19,6 +20,14 @@ aeApp.factory('Store', () => {
             return selectedExpert;
         },
 
+        setSelectedExpertCost(cost){
+            selectedExpertCost = cost;
+        },
+
+        getSelectedExpertCost(){
+            return selectedExpertCost;
+        },
+
     };
 });
 
@@ -28,21 +37,25 @@ aeApp.factory('Store', () => {
 
 //App Controller
 
-aeApp.controller('AppController', ['$rootScope', '$scope', 'Store', function ($rootScope, $scope, Store) {
+aeApp.controller('AppController', ['$rootScope', '$scope', 'Store', '$http', function ($rootScope, $scope, Store, $http) {
     $rootScope.showModal = false;
     $scope.setMeetingClicked = function(expert_id){
         $rootScope.showModal = true;
         console.log("Selected expert id: "+ expert_id);
         Store.setSelectedExpert(expert_id);
-        // if($rootScope.showModal === true){
-        //     console.log(Store.getSelectedExpert());
-        //     Store.setSelectedExpert('1');
-        //     $scope.showModal = false;
-        // }else{
-        //     console.log(Store.getSelectedExpert());
-        //     Store.setSelectedExpert('2');
-        //     $scope.showModal = true;
-        // }
+
+        var url = 'api/expert/' + Store.getSelectedExpert() + '/cost';
+
+        //GET request to get cost per minute of expert:
+        $http({
+            method: 'GET',
+            url: url
+        }).then(function successCallback(response) {
+            Store.setSelectedExpertCost(response.data.data.rate);
+            console.log("Expert cost set to "+ Store.getSelectedExpertCost());
+        }, function errorCallback(response) {
+            console.log(response.data.error);
+        });
     }
 
 }]);
@@ -53,64 +66,123 @@ aeApp.controller('AppController', ['$rootScope', '$scope', 'Store', function ($r
 //Modal Component
 aeApp.component('aeModal', {
     templateUrl: '/angular/modal.html',
-    controller: function ModalController(Store, $rootScope, $scope) {
+    controller: function ModalController(Store, $rootScope, $scope, $http) {
         this.user = 'world';
+        this.submitted_successfully = false;
+        this.submitting = false;
         this.selectedExpert = Store.getSelectedExpert();
 
+        this.showSendingRequest = false;
         this.hideModal = function () {
             console.log("Selected expert id: " + Store.getSelectedExpert());
             $rootScope.showModal = false;
+            $scope.submitted_successfully = false;
+            $scope.submitting = false;
+            resetErrorVariables();
+            resetModels();
         };
 
         this.preferable_times = ["9:00 am", "10:00 am", "11:00 am"];
-        this.estimated_duration = ["5 min", "10 min", "11 min"];
-        this.requestNowClicked = function() {
+        this.estimated_duration = ["5 minutes", "10 minutes", "11 minutes"];
+
+        var resetModels = function () {
+            $scope.requestor_name = "";
+            $scope.requestor_phone_number = "";
+            $scope.preferable_date = "";
+            $scope.preferable_time = "";
+            $scope.estimated_duration = "";
+            $scope.discussion_topics = "";
+        };
+
+        var resetErrorVariables = function () {
             $scope.errorInName = false;
             $scope.errorInPhoneNumber = false;
             $scope.errorInDate = false;
             $scope.errorInTime = false;
             $scope.errorInDuration = false;
             $scope.errorInTopic = false;
+        };
+        this.requestNowClicked = function() {
+            var has_error_flag = false;
+            resetErrorVariables();
 
             if($scope.requestor_name == undefined || $scope.requestor_name == ""){
                 $scope.errorInName = true;
                 console.log("Please enter your name");
+                has_error_flag = true;
             }
 
             if($scope.requestor_phone_number == undefined || $scope.requestor_phone_number == ""){
                 $scope.errorInPhoneNumber = true;
                 console.log("Please enter your phone number");
+                has_error_flag = true;
             }
 
             if($scope.preferable_date == undefined || $scope.requestor_phone_number == ""){
                 $scope.errorInDate = true;
                 console.log("Please enter your preferable date");
+                has_error_flag = true;
             }
             if($scope.preferable_time == undefined || $scope.requestor_phone_number == ""){
                 $scope.errorInTime = true;
                 console.log("Please enter your preferable time");
+                has_error_flag = true;
             }
             if($scope.estimated_duration == undefined || $scope.requestor_phone_number == ""){
                 $scope.errorInDuration = true;
                 console.log("Please enter your preferred duration");
+                has_error_flag = true;
             }
-            if($scope.discussion_topic == undefined || $scope.requestor_phone_number == ""){
+            if($scope.discussion_topics == undefined || $scope.requestor_phone_number == ""){
                 $scope.errorInTopic = true;
                 console.log("Please enter your discussion topic");
+                has_error_flag = true;
             }
 
-            let expert_id = Store.getSelectedExpert();
-            console.log("Request Now Clicked");
-            console.log("Expert: " + expert_id);
-            console.log($scope.requestor_name);
-            console.log($scope.requestor_phone_number);
-            console.log($scope.preferable_date);
-            console.log($scope.preferable_time);
-            console.log($scope.estimated_duration);
-            console.log($scope.discussion_topic);
+            if(has_error_flag == false){
+                $scope.submitting = true;
+                let expert_id = Store.getSelectedExpert();
 
+                var data = $.param({
+                    requestor_name: $scope.requestor_name,
+                    requestor_phone_number: $scope.requestor_phone_number,
+                    preferable_date: $scope.preferable_date,
+                    preferable_time: $scope.preferable_time,
+                    estimated_duration: $scope.estimated_duration,
+                    discussion_topics: $scope.discussion_topics
+                });
+
+                var config = {
+                    headers : {
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                    }
+                };
+
+                var url = '/api/expert/'+ expert_id +'/meeting';
+
+                $http.post(url, data, config).then(function(response){
+                    $scope.message = response.data.data.message;
+                    $scope.submitting = false;
+                    $scope.submitted_successfully = true;
+                });
+
+            }else{
+                console.log('There is validation error in form');
+            }
 
         };
+
+        this.loadCostings = function () {
+            var cost = Store.getSelectedExpertCost();
+            var array = [];
+            var count = 5;
+            while(count<=15){
+                array.push(count + " minutes, Tk." + cost*count );
+                count = count + 5;
+            }
+            this.estimated_duration = array;
+        }
+       
     }
 });
 //Modal Component Ends

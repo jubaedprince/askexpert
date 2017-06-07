@@ -77,14 +77,14 @@
 	margin: 15px 0px 10px;
     font-size: 14px;
     font-weight: 500;
-    color:  #9575cd;;
+    color:  #9575cd;
 	
 }
 
 
 .expert-caption{
 	height: 135px;
-	overflow:overlay
+	overflow:hidden;
 }
 
 .expert-caption p{

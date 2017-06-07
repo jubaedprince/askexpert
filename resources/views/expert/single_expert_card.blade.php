@@ -7,7 +7,7 @@
     <div class="expert-title"><p>{{$expert->current_occupation}}</p></div>
     <div class="expert-caption">
         <p>
-            {{$expert->bio}}
+            {{str_limit($expert->bio, 350)}}
         </p>
     </div>
     {{--<button class="btn btn-expert" data-toggle="modal" data-target="#myModal" onClick="setGlobalExpert({{$expert->id}}, {{$expert->cost_per_minute}})">Set Meeting Tk.{{$expert->cost_per_minute}}/minute</button>--}}

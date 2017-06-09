@@ -229,7 +229,7 @@ h1{
 }
 
 /* The Modal (background) */
-.modal {
+.modal-booking {
 	display: block; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
@@ -243,7 +243,7 @@ h1{
 }
 
 /* Modal Content/Box */
-.modal-content {
+.modal-booking-content {
 	background-color: #fefefe;
 	margin: 9% auto; /* 15% from the top and centered */
 	padding: 20px;

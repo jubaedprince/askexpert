@@ -228,7 +228,7 @@ h1{
 	margin-top: -10px;
 }
 
-/* The Modal (background) */
+/* The Booking Modal (background) */
 .modal-booking {
 	display: block; /* Hidden by default */
 	position: fixed; /* Stay in place */
@@ -242,7 +242,7 @@ h1{
 	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* Booking Modal Content/Box */
 .modal-booking-content {
 	background-color: #fefefe;
 	margin: 9% auto; /* 15% from the top and centered */

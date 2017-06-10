@@ -87,7 +87,7 @@
 
                                                     <p>{{$service->description}}</p>
                                                     @foreach($service->tags as $tag)
-                                                        <span class="label label-default">{{$tag->name}}</span>
+                                                        <a href="{{$tag->service_url}}"><span class="label label-default">{{$tag->name}}</span></a>
                                                     @endforeach
                                                 </div>
                                                 <div class="col-md-3 service-right-section text-center">

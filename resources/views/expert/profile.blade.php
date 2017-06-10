@@ -58,7 +58,7 @@
                                         <p>{{$expert->bio}}</p>
                                         @if($expert->youtube_video_id)
                                             <div class="row text-center">
-                                                <div>
+                                                <div class="video-container">
                                                     <iframe width="640" height="360"
                                                             src="https://www.youtube.com/embed/{{$expert->youtube_video_id}}"
                                                             frameborder="0" allowfullscreen>

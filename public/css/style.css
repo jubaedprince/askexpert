@@ -1,8 +1,16 @@
-@font-face {
-    font-family: CanelaBark_PERSONAL;
-    src: url('/fonts/CanelaBark_PERSONAL.ttf');
+
+
+body{
+	background-color: white;
 }
 
+.all-content{
+	margin-top: 100px;
+}
+
+.navbar-collapse{
+	background-color: white;
+}
 /*logo font*/
 .navbar-brand{
 	font-family: CanelaBark_PERSONAL;
@@ -11,19 +19,21 @@
 
 /*increased height of navbar and changed background color*/
 .navbar{
+
+	box-shadow:  0 1px 5px rgba(0, 0, 0, 0.1);
 	padding-top: 12px;
-	background: #9575CD;
+	background: #ffffff;
 	height: 80px;
 	margin-bottom: 35px;
 }
 
 /*navbar links' colors are adjusted*/
 .navbar-default .navbar-nav>li>a, .navbar-default .navbar-text{
-	color: #EDE7F6; 
+	color: #484848;
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
-	color: white;
+	color: #080208;
 }
 
 
@@ -32,13 +42,13 @@
 }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
-	color: white;
+	color: #080707;
 }
 
 /*rectange for become and expert*/
 #become-an-expert a{
-	color: white;
-	border: 2px solid white;
+	color: #484848;
+	border: 2px solid #dbdbdb;
 	margin-right: 40px;
 }
 
@@ -49,24 +59,20 @@
 
 
 .solid-background-positive{
-	color: white;
-	background: #9575CD;
 	padding-top: 30px;
 	padding-bottom: 90px;
 }
 
 
 .solid-background-negative{
-	color: rgb(149, 117, 205);
-	background: white;
 	padding-top: 30px;
 	padding-bottom: 90px;
+	border-bottom: 1px solid #dce0e0;
 }
 
 
 .solid-background-footer{
-	color: #ddd;
-	background: #26124a;
+	border-top: 1px solid #dce0e0;
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
@@ -102,50 +108,44 @@
 	/*background: white;*/
 	color: black;
 	margin-top: 15px;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border: 1px solid rgba(98, 70, 148, 0.93);
-    background: #283b44;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    background: #ff5a5f;
     color:  rgba(255, 255, 255, 0.93);
     
 }
 
 .btn-expert:hover {
-    background-color: #26b0d7;
+    background-color: #ff5a4e;
     color: #fff;
-    border-color: #fff;
 }
 
 .btn-browse-expert{
 	font-size: 18px;
+	font-weight: 400;
 	background-color: white;
-    color: #fff;
-    border-color: #fff;
-	color: black;
+	color: #ff5a5f;
+	border-color: #ff5a5f;
 	margin-top: 15px;
-	padding-left: 80px; 
+	padding-left: 80px;
 	padding-right: 80px;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    /*border: 1px solid rgba(98, 70, 148, 0.93);*/
-    /*background: transparent;*/
-    color:  rgba(98, 70, 148, 0.5);
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
 }
 
 .btn-browse-expert:hover{
-
-    color:  rgba(98, 70, 148, 0.93);
+	color: #ff5a4e;
 }
 
 .expert{
-	/*border-radius: 10px;*/
+	border-radius: 5px;
 	background: rgb(255, 255, 255);
 	width: 280px;
 	margin: 10px;
-	padding: 10px;
-	/*border: 1px solid white;*/
+	padding: 20px;
+	border: 1px solid #dce0e0;
 	float: left;
 }
 
@@ -170,7 +170,7 @@ h1{
 	width: 380px;
 	float: left;
 	margin-top: 20px;
-	border: 1px solid  rgba(149, 117, 205, 0.14);
+	border: 1px solid  #dce0e0;
 	border-radius: 20px;
 	padding: 20px;
 	margin-right: 10px;

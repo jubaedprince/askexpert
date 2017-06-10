@@ -31,7 +31,7 @@
 </head>
 <body>
     <div id="app" ng-controller="AppController">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -44,8 +44,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a  href="{{ url('/') }}" ><img width="170px" src="/images/askexpert_logo.png"></a>
-                    {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
+                    {{--<a href="{{ url('/') }}">--}}
+                        <a class="navbar-brand"  href="{{ url('/') }}" ><img width="120px" src="/images/askexpert_logo.png" style="margin-top: -6%"></a>
                         {{--{{ config('app.name', 'AskExpert') }}--}}
                     {{--</a>--}}
                 </div>
@@ -56,7 +56,7 @@
 
                         <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    Categories <span class="caret"></span>
+                                    CATEGORIES <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -73,8 +73,8 @@
 
 
 
-                        <li><a href="{{ url('/expert') }}">Browse Experts</a></li>
-                        <li><a href="{{ url('/contact') }}">Contact</a></li>
+                        <li><a href="{{ url('/expert') }}">BROWSE EXPERTS</a></li>
+                        <li><a href="{{ url('/contact') }}">CONTACT</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -129,7 +129,9 @@
                 </div>
             </div>
         </nav>
-        @yield('content')
+        <div class="all-content">
+            @yield('content')
+        </div>
         <ae-modal ng-show="showModal"></ae-modal>
 
     </div>

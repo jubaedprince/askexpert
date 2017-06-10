@@ -1,13 +1,5 @@
 @extends('layouts.app')
 
-@section('styles')
-    <style>
-        .expert{
-            border: 1px solid rgba(182, 143, 251, 0.42);
-            border-radius: 6px;
-        }
-    </style>
-@endsection
 @section('content')
     <section>
         <div>

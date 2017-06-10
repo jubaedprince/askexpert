@@ -72,6 +72,7 @@
                         processData: false,
                         success: function(data, textStatus, jqXHR)
                         {
+                            location.reload();
 //                            $('#expert-profile-picture').attr('src', data.profile_picture_url );
                         },
                         error: function (jqXHR, textStatus, errorThrown)
@@ -207,11 +208,12 @@
                 <h4 class="modal-title" id="myModalLabel">Change Profile Picture</h4>
             </div>
             <div class="modal-body">
+
                 <div>
                     <div class="actions">
-                        <a class="btn file-btn">
+                        {{--<a class="btn file-btn">--}}
                             <input type="file" id="upload" value="Choose a file" accept="image/*"/>
-                        </a>
+                        {{--</a>--}}
                     </div>
                 </div>
 

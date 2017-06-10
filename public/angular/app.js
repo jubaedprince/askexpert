@@ -67,6 +67,7 @@ aeApp.controller('AppController', ['$rootScope', '$scope', 'Store', '$http', fun
 aeApp.component('aeModal', {
     templateUrl: '/angular/modal.html',
     controller: function ModalController(Store, $rootScope, $scope, $http) {
+
         this.user = 'world';
         this.submitted_successfully = false;
         this.submitting = false;
@@ -74,7 +75,6 @@ aeApp.component('aeModal', {
 
         this.showSendingRequest = false;
         this.hideModal = function () {
-            console.log("Selected expert id: " + Store.getSelectedExpert());
             $rootScope.showModal = false;
             $scope.submitted_successfully = false;
             $scope.submitting = false;
@@ -181,6 +181,13 @@ aeApp.component('aeModal', {
                 count = count + 5;
             }
             this.estimated_duration = array;
+        }
+
+        this.close = function($event){
+            console.log($(event.target).prop("class"));
+            if($(event.target).prop("class") == "modal modal-booking" || $(event.target).prop("class") ==  "modal-dialog modal-lg"){
+                this.hideModal();
+            }
         }
        
     }

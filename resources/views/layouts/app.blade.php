@@ -133,6 +133,28 @@
         <div class="all-content">
             @yield('content')
         </div>
+
+        <footer class="container text-center">
+            <div class="pull-left" style="margin-top: 8px">
+                <p>© askexpert.co</p>
+
+            </div>
+            <div class="pull-right">
+                <ul class="footer-navigation">
+                    <li class="footer-navigation-li"> <a href="/sitemap">Site Map</a></li>
+                    <li class="footer-navigation-li"> <a href="/terms">Terms</a></li>
+                    <li class="footer-navigation-li"><a><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li class="footer-navigation-li"><a><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li class="footer-navigation-li"><a><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                </ul>
+
+
+
+
+
+            </div>
+        </footer>
+
         <ae-modal ng-show="showModal"></ae-modal>
 
     </div>

@@ -2,6 +2,27 @@ body{
 	background-color: white;
 }
 
+.footer-navigation{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.footer-navigation-li {
+	float: left;
+}
+
+li a {
+	display: block;
+	text-align: center;
+	padding: 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+}
+
 .well-contact{
 	background-color: white;
 }
@@ -10,6 +31,11 @@ body{
 	margin-top: 100px;
 }
 
+footer{
+	margin-top: 50px;
+	border-top: 1px solid #dce0e0;
+	height: 75px;
+}
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;

@@ -18,6 +18,7 @@
 
     <link href="/css/carousel.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="/external-libraries/font-awesome-4.7.0/css/font-awesome.min.css">
     @yield('styles')
 
     <!-- Scripts -->

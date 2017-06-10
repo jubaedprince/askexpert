@@ -16,7 +16,7 @@
             <div class="carousel-caption">
               <h1>Need Advice for your Startup?</h1>
               <p>Book a meeting with any expert, we will connect you!</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse Expert</a></p>
+              <p><a class="btn btn-lg btn-expert" href="#" role="button">Browse Expert</a></p>
             </div>
           </div>
         </div>

@@ -22,7 +22,6 @@ body{
 	height: 100%;
 }
 
-
 .navbar-collapse{
 	background-color: white;
 }
@@ -119,6 +118,11 @@ body{
 
 }
 
+.btn-service{
+	margin-left: -5px;
+	margin-top: -5px !important;
+}
+
 .btn-expert {
 	/*background: white;*/
 	color: black;
@@ -128,7 +132,7 @@ body{
     -moz-border-radius: 8px;
     background: #ff5a5f;
     color:  rgba(255, 255, 255, 0.93);
-    
+
 }
 
 .btn-expert:hover {
@@ -230,6 +234,7 @@ h1{
 .service-right-section{
 	padding-top: 3%;
 }
+
 .get-service{
 	color: white;
 	font-weight: 800;

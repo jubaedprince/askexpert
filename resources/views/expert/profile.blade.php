@@ -59,10 +59,7 @@
                                         @if($expert->youtube_video_id)
                                             <div class="row text-center">
                                                 <div class="video-container">
-                                                    <iframe width="640" height="360"
-                                                            src="https://www.youtube.com/embed/{{$expert->youtube_video_id}}"
-                                                            frameborder="0" allowfullscreen>
-                                                    </iframe>
+                                                    <iframe width="640" height="360" src="https://www.youtube.com/embed/{{$expert->youtube_video_id}}" frameborder="0" allowfullscreen></iframe>
                                                 </div>
                                             </div>
                                         @endif
@@ -84,16 +81,14 @@
 
                                                 <div class="col-md-9">
                                                     <h3 class="service-title-header">{{$service->title}}</h3>
-
                                                     <p>{{$service->description}}</p>
+
                                                     @foreach($service->tags as $tag)
                                                         <a href="{{$tag->service_url}}"><span class="label label-default">{{$tag->name}}</span></a>
                                                     @endforeach
                                                 </div>
                                                 <div class="col-md-3 service-right-section text-center">
-                                                    <button class="btn  get-service"
-                                                            ng-click="setMeetingClicked({{$expert->id}})">Set a Meeting
-                                                    </button>
+                                                    <button class="btn btn-expert btn-service" ng-click="setMeetingClicked({{$expert->id}})" style="margin-top: 10px !important">Set a Meeting</button>
                                                 </div>
                                             </div>
                                         </div>

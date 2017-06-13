@@ -200,20 +200,6 @@
 
     @yield('scripts')
 
-    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyDJKwNYepbZpNGkDU40yVphA_S-6qvr4mQ",
-            authDomain: "askexpert-7cf5b.firebaseapp.com",
-            databaseURL: "https://askexpert-7cf5b.firebaseio.com",
-            projectId: "askexpert-7cf5b",
-            storageBucket: "askexpert-7cf5b.appspot.com",
-            messagingSenderId: "815928737880"
-        };
-        firebase.initializeApp(config);
-    </script>
-
 
 
 </body>

@@ -56,26 +56,26 @@
         <div class="container">
           <div class="row text-center">
             <h1>How It Works</h1>
-            <p>Experts make your life easy. They can help anyway necessary.</p>
+            {{--<p>Experts make your life easy. They can help anyway necessary.</p>--}}
           
               <div class="outer">
               <div class="steps">
                 <h4>Step 1</h4>
                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                <h2>Find an expert</h2>
-                <p>Browse from a big pull of experts</p>
+                <h2>Find Expert</h2>
+                <p>Browse our website to find the right expert for you.</p>
               </div>
               <div class="steps">
                 <h4>Step 2</h4>
                 <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
                 <h2>Request Meeting</h2>
-                <p>Tell us your timetable.</p>
+                <p>Tell us why, when and how long you want to talk.</p>
               </div>
               <div class="steps">
                 <h4>Step 3</h4>
                 <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                <h2>We will Connect</h2>
-                <p>We will talk to expert and connect him with you</p>
+                <h2>Get Advice</h2>
+                <p>We shall connect you with the expert over phone.</p>
               </div>
                
               </div>

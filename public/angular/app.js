@@ -103,6 +103,7 @@ aeApp.component('aeModal', {
             $scope.errorInTopic = false;
         };
         this.requestNowClicked = function() {
+            FB.AppEvents.logEvent("requestNowClicked");
             var has_error_flag = false;
             resetErrorVariables();
 

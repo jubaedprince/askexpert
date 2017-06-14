@@ -124,12 +124,11 @@ footer{
 
 
 .expert-name{
-
 	margin: 15px 0px 10px;
     font-size: 14px;
-    font-weight: 500;
-    color:  #9575cd;
-	
+    font-weight: 700;
+    color:  #484848;
+
 }
 
 
@@ -139,9 +138,9 @@ footer{
 }
 
 .expert-caption p{
-	color:#636b6f;
+	color:rgba(0, 0, 0, 0.5);
 	text-align: justify;
-	font-size: 12px;
+	font-size: 15px;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
@@ -232,9 +231,10 @@ h1{
 }
 
 .expert-title>p{
-	color: rgba(172, 140, 138, 0.69);
+	color: #484848;
 	margin-top: -10px;
-    font-size: 12px;
+    font-size: 15px;
+	font-weight: 300;
 }
 
 .dropdown:hover .dropdown-menu {

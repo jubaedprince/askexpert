@@ -30,7 +30,7 @@
     <link href="/css/carousel.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/external-libraries/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     @yield('styles')
 

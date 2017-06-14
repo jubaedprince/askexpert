@@ -301,3 +301,21 @@ h1{
 	border: 1px solid #888;
 	width: 80%; /* Could be more or less, depending on screen size */
 }
+
+iframe, object, embed {
+	max-width: 100%;
+}
+
+.profile-pic-panel{
+	margin-right: 10px;
+}
+
+.service-title-header{
+	margin-top: 2px;
+}
+
+.set-meeting-button-instruction{
+	color: #858585;
+	padding: 3px;
+	font-size:13px;
+}

@@ -31,19 +31,19 @@
 
     </div>
 
-    <div class="row">
-        @if($expert->youtube_video_id)
-            <div class="text-center">
-                <div class="video-container">
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/{{$expert->youtube_video_id}}" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-        @endif
-    </div>
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
 
+            <div class="row">
+                @if($expert->youtube_video_id)
+                    <div class="col-md-12">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/{{$expert->youtube_video_id}}" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                @endif
+            </div>
             <div class="row">
 
 

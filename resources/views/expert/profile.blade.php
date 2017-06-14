@@ -51,7 +51,7 @@
                     {{--area of expertise--}}
                     <div class="row">
                         <div class="col-md-12">
-                            <h2>Expertise</h2>
+                            <h2 class="text-center">Area of Expertise</h2>
                             <div>
                                 @foreach($expert->services as $service)
 

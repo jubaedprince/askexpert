@@ -132,10 +132,21 @@
 
                         <li><a href="{{ url('/expert') }}">BROWSE EXPERTS</a></li>
                         <li><a href="{{ url('/contact') }}">CONTACT</a></li>
+
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form class="navbar-form" role="search" action="/search" method="POST">
+                                {{csrf_field()}}
+                                <div class="input-group">
+                                    <input type="text" name="query_term" class="form-control" placeholder="Search">
+                                </div>
+                            </form>
+                        </li>
+
                         <!-- Authentication Links -->
                         <li id="become-an-expert"><a href="{{ url('/expert/register') }}">Become An Expert</a></li>
                         @if (Auth::guest())
@@ -172,14 +183,7 @@
                         @endif
                     </ul>
 
-                    <div class="col-sm-3 col-md-3 pull-right">
-                        <form class="navbar-form" role="search" action="/search" method="POST">
-                            {{csrf_field()}}
-                            <div class="input-group">
-                                <input type="text" name="query_term" class="form-control" placeholder="Search">
-                            </div>
-                        </form>
-                    </div>
+
 
 
 

@@ -17,7 +17,7 @@
                 <h3 class="service-rate">Tk. {{$service->expert->cost_per_minute}}</h3>
                 <p class="per-minute">per minute</p>
                 @unless($disable_set_meeting)
-                    <button class="btn btn-expert btn-service" ng-click="setMeetingClicked({{$service->expert->id}})">Book a Meeting</button>
+                    <button class="btn btn-expert btn-service" ng-click="setMeetingClicked({{$service->expert->id}})">Set Meeting</button>
 
                     {{--<button class="btn btn-expert" ng-click="setMeetingClicked({{$expert->id}})">Set Meeting Tk.{{$expert->cost_per_minute}}/minute</button>--}}
                 @endunless

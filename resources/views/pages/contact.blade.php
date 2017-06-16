@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="well  well-contact">
                     <h2>askexpert.co</h2>
-                    <p>expert advice, on anything!</p>
+                    {{--<p>expert advice, on anything!</p>--}}
                 </div>
             </div>
         </div>
@@ -43,8 +43,8 @@
                     <p>880 1199 1199 2</p>
                 </div>
                 <div class="well  well-contact">
-                    <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-                    <h4>Mobile</h4>
+                    <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                    <h4>Instagram</h4>
                     <p>880 1199 1199 2</p>
                 </div>
             </div>

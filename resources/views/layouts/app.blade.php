@@ -123,7 +123,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                @foreach(App\Tag::all() as $tag)
+                                @foreach(App\Tag::orderBy('name')->get() as $tag)
                                     <li>
                                         <a href="/service?by={{$tag->name}}">
                                             {{$tag->name}}
@@ -148,7 +148,7 @@
                             <form class="navbar-form" role="search" action="/search" method="POST">
                                 {{csrf_field()}}
                                 <div class="input-group">
-                                    <input type="text" name="query_term" class="form-control" placeholder="Search">
+                                    <input type="text" name="query_term" class="form-control" placeholder="Search expert">
                                 </div>
                             </form>
                         </li>
@@ -207,7 +207,7 @@
             </div>
             <div class="pull-right">
                 <ul class="footer-navigation">
-                    <li class="footer-navigation-li"> <a href="/sitemap">Site Map</a></li>
+                    {{--<li class="footer-navigation-li"> <a href="/sitemap">Site Map</a></li>--}}
                     <li class="footer-navigation-li"> <a href="/terms">Terms</a></li>
                     <li class="footer-navigation-li"><a><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <li class="footer-navigation-li"><a><i class="fa fa-twitter" aria-hidden="true"></i></a></li>

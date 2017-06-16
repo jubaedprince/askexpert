@@ -60,7 +60,7 @@
                                             @endforeach
                                         </div>
                                         <div class="col-md-3 service-right-section text-center">
-                                            <button class="btn btn-expert btn-service" ng-click="setMeetingClicked({{$expert->id}})" style="margin-top: 10px !important">Set a Meeting</button>
+                                            <button class="btn btn-expert btn-service" ng-click="setMeetingClicked({{$expert->id}})" style="margin-top: 10px !important">Set Meeting</button>
                                         </div>
                                     </div>
                                 </div>

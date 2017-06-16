@@ -19,22 +19,22 @@
                   </tr>
                 </thead>
                 <tbody>
-                @foreach($pending_services as $service)
-                    <tr>
-                        <td>{{$service->title}}</td>
-                        <td>{{$service->expert->user->name}}</td>
-                        <td>{{$service->short_description}}</td>
-                        <td>{{date('F d, Y', strtotime($service->created_at)) }}</td>
-                        <td>
-                            <a href="{{url('/admin/service/' . $service->id)}}" class="btn btn-default btn-xs">View</a>
-                            <form action="{{ url('admin/service/' . $service->id ) }}" method="POST">
-                                <input type="hidden" name="status" value="approved">
-                                {{ csrf_field() }}
-                                <button type="submit" class="btn btn-success btn-xs">Approve</button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
+                    @foreach($pending_services as $service)
+                        <tr>
+                            <td>{{$service->title}}</td>
+                            <td>{{$service->expert->user->name}}</td>
+                            <td>{{$service->short_description}}</td>
+                            <td>{{date('F d, Y', strtotime($service->created_at)) }}</td>
+                            <td>
+                                <a href="{{url('/admin/service/' . $service->id)}}" class="btn btn-default btn-xs">View</a>
+                                <form action="{{ url('admin/service/' . $service->id ) }}" method="POST">
+                                    <input type="hidden" name="status" value="approved">
+                                    {{ csrf_field() }}
+                                    <button type="submit" class="btn btn-success btn-xs">Approve</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
               </table>
             </div>

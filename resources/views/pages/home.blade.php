@@ -14,9 +14,9 @@
           <img class="first-slide" src="/images/calling.jpg">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Need expert advice for your problem?</h1>
+              <h1>Need expert advice for your business?</h1>
               <p>Talk to an industry expert over phone.</p>
-              <p><a class="btn btn-lg btn-expert" href="/expert">Browse Expert</a></p>
+              <p><a class="btn btn-lg btn-expert" href="/expert">Browse Our Experts</a></p>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@
         <div class="container">
           <div class="row text-center">
             <h1>Our Experts</h1>
-            <p>Experts make your life easy. They can help anyway necessary.</p>
+            {{--<p>Experts make your life easy. They can help anyway necessary.</p>--}}
               <div class="row">
                 <div class="outer">
                    {{--@for ($i = 0; $i < 10; $i++)--}}
@@ -117,7 +117,7 @@
       <div class="solid-background-footer">
         <div class="container">
           <div class="row text-center">
-            <p>We have just launched something special for you. Stay with us!</p>
+            <p>This is beta. We have just launched something special for you. Stay with us!</p>
           </div>
         </div>
       </div>

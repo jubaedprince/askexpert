@@ -301,6 +301,7 @@ h1{
 	/*background-color: rgba(0,0,0,0.4); !* Black w/ opacity *!*/
 }
 
+
 /* Booking Modal Content/Box */
 .modal-booking-content {
 	background-color: #fefefe;
@@ -326,4 +327,32 @@ iframe, object, embed {
 	color: #858585;
 	padding: 3px;
 	font-size:13px;
+}
+
+
+
+@media (max-width: 300px) {
+
+	/* Booking Modal Content/Box */
+	.modal-booking-content {
+		background-color: #fefefe;
+		margin: 38% auto; /* 15% from the top and centered */
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%; /* Could be more or less, depending on screen size */
+	}
+
+}
+
+@media (max-width: 1200px) and (min-width: 100px) {
+
+	/* Booking Modal Content/Box */
+	.modal-booking-content {
+		background-color: #fefefe;
+		margin: 100px auto; /* 15% from the top and centered */
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%; /* Could be more or less, depending on screen size */
+	}
+
 }

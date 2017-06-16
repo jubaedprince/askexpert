@@ -3,6 +3,10 @@ body{
 	background-color: white;
 }
 
+#myCarousel{
+	margin-top: -100px;
+}
+
 .expert a:hover{
 	text-decoration: none;
 }

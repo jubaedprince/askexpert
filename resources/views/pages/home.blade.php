@@ -2,21 +2,21 @@
 
 @section('content')
 
-	<div id="myCarousel" class="carousel slide home-carousel" data-ride="carousel" >
+	<div id="myCarousel" class="carousel slide home-carousel" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+        {{--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>--}}
+        {{--<li data-target="#myCarousel" data-slide-to="1" class=""></li>--}}
+        {{--<li data-target="#myCarousel" data-slide-to="2" class=""></li>--}}
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img class="first-slide" src="/images/calling.jpg">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Need Advice for your Startup?</h1>
-              <p>Book a meeting with any expert, we will connect you!</p>
-              <p><a class="btn btn-lg btn-expert" href="#" role="button">Browse Expert</a></p>
+              <h1>Need expert advice for your problem?</h1>
+              <p>Talk to an industry expert over phone.</p>
+              <p><a class="btn btn-lg btn-expert" href="/expert">Browse Expert</a></p>
             </div>
           </div>
         </div>
@@ -41,14 +41,14 @@
           {{--</div>--}}
         {{--</div>--}}
       {{--</div>--}}
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      {{--<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">--}}
+        {{--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>--}}
+        {{--<span class="sr-only">Previous</span>--}}
+      {{--</a>--}}
+      {{--<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">--}}
+        {{--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>--}}
+        {{--<span class="sr-only">Next</span>--}}
+      {{--</a>--}}
     </div>
     </div>
     <section>

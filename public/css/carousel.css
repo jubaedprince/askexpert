@@ -12,6 +12,7 @@
 .carousel-caption {
   z-index: 10;
   margin-bottom: 10%;
+  text-shadow: 1px 1px 5px rgba(2, 2, 2, 1);
 }
 
 /* Declare heights because of positioning of img element */
@@ -82,3 +83,4 @@
     margin-top: 120px;
   }
 }
+

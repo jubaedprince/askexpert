@@ -347,6 +347,9 @@ iframe, object, embed {
 .navbar-form{
 	margin-right: 50px;
 }
+.panel-body{
+	padding: 26px;
+}
 
 
 @media (max-width: 1200px) and (min-width: 100px) {

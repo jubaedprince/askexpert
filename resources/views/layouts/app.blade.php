@@ -19,6 +19,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    {{--Facebook--}}
+    <meta property="og:description"        content="We connect you with experts of different industry over phone. You can ask about your problems, plans and ideas." />
 
     <title>{{ config('app.name', 'AskExpert') }}</title>
 

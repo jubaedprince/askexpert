@@ -20,7 +20,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{--Facebook--}}
-    <meta property="og:description"        content="We connect you with experts of different industry over phone. You can ask about your problems, plans and ideas." />
+    <meta property="og:url"                content="http://www.askexpert.co" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="AskExpert.co | Expert advice over phone" />
+    <meta property="og:description" content="We connect you with experts of different industry over phone. You can ask about your problems, plans and ideas." />
+    <meta property="og:image"              content="http://askexpert.co/images/calling.jpg" />
 
     <title>{{ config('app.name', 'AskExpert') }}</title>
 

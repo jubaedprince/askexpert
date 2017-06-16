@@ -29,6 +29,50 @@
         </div>
 
 
+        <div class="row">
+            @if($expert->youtube_video_id)
+                <div class="col-md-12">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/{{$expert->youtube_video_id}}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            @endif
+        </div>
+
+        {{--area of expertise--}}
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">Area of Expertise</h3>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        @foreach($expert->services as $service)
+
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="row">
+
+                                        <div class="col-md-9">
+                                            <h3 class="service-title-header">{{$service->title}}</h3>
+                                            <p>{{$service->description}}</p>
+
+                                            @foreach($service->tags as $tag)
+                                                <a href="{{$tag->service_url}}"><span class="label label-default">{{$tag->name}}</span></a>
+                                            @endforeach
+                                        </div>
+                                        <div class="col-md-3 service-right-section text-center">
+                                            <button class="btn btn-expert btn-service" ng-click="setMeetingClicked({{$expert->id}})" style="margin-top: 10px !important">Set a Meeting</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     </div>
 
 
@@ -36,48 +80,9 @@
         <div class="col-md-8 col-md-offset-2">
 
             <div class="row">
-                @if($expert->youtube_video_id)
-                    <div class="col-md-12">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/{{$expert->youtube_video_id}}" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                @endif
-            </div>
-            <div class="row">
 
 
 
-                    {{--area of expertise--}}
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2 class="text-center">Area of Expertise</h2>
-                            <div>
-                                @foreach($expert->services as $service)
-
-                                    <div class="panel panel-default">
-                                        <div class="panel-body">
-                                            <div class="row">
-
-                                                <div class="col-md-9">
-                                                    <h3 class="service-title-header">{{$service->title}}</h3>
-                                                    <p>{{$service->description}}</p>
-
-                                                    @foreach($service->tags as $tag)
-                                                        <a href="{{$tag->service_url}}"><span class="label label-default">{{$tag->name}}</span></a>
-                                                    @endforeach
-                                                </div>
-                                                <div class="col-md-3 service-right-section text-center">
-                                                    <button class="btn btn-expert btn-service" ng-click="setMeetingClicked({{$expert->id}})" style="margin-top: 10px !important">Set a Meeting</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>

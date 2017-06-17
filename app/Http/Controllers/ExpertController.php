@@ -31,7 +31,7 @@ class ExpertController extends Controller
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
             'mobile' => 'required',
-            'cost_per_minute' => 'required',
+            'cost_per_minute' => 'required|integer',
             'current_occupation' => 'required',
             'bio' => 'required|min:150'
         ]);

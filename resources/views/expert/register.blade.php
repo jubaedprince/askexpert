@@ -56,7 +56,7 @@
                             <label for="bio" class="col-md-4 control-label">Bio</label>
 
                             <div class="col-md-6">
-                                <textarea rows="6" onkeyup="countChar(this)" id="bio" class="form-control" name="bio"  required autofocus></textarea>
+                                <textarea rows="6" onkeyup="countChar(this)" id="bio" class="form-control" name="bio"  required autofocus>{{ old('bio') }}</textarea>
                                 <div id="charNum"></div>
                                 @if ($errors->has('bio'))
                                     <span class="help-block">
@@ -95,10 +95,10 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('cost_per_minute') ? ' has-error' : '' }}">
-                            <label for="cost_per_minute" class="col-md-4 control-label">Cost Per Minute</label>
+                            <label for="cost_per_minute" class="col-md-4 control-label">Cost Per Minute (Taka)</label>
 
                             <div class="col-md-6">
-                                <input id="cost_per_minute" type="text" class="form-control" name="cost_per_minute" value="{{ old('cost_per_minute') }}" required autofocus>
+                                <input id="cost_per_minute" placeholder="example: 50" type="text" class="form-control" name="cost_per_minute" value="{{ old('cost_per_minute') }}" required autofocus>
 
                                 @if ($errors->has('cost_per_minute'))
                                     <span class="help-block">

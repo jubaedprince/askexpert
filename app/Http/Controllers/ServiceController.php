@@ -14,7 +14,7 @@ class ServiceController extends Controller
     {
         if(isset($request['by'])){
             $services = Service::whereHas('tags', function ($query) use ($request) {
-                $query->where('name', $request['by']);
+                $query->where('name', $request['by'])->where('is_approved', true)->where('is_enabled', true);
             })->get();
         }else{
             $services = Service::all();

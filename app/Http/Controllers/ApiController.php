@@ -64,8 +64,9 @@ class ApiController extends Controller
         $meeting->expert_id = $expert->id;
         $meeting->save();
 
+        $to = explode(',', env('ADMIN_EMAIL', 'zhossain99@gmail.com,jubaedprince@gmail.com'));
 
-        Mail::to(env('ADMIN_EMAIL', 'jubaedprince@gmail.com'))->send(new MeetingRequestReceived($meeting));
+        Mail::to($to)->send(new MeetingRequestReceived($meeting));
 
         return response()->json([
             'data' => [

@@ -208,7 +208,7 @@
             <div class="pull-right">
                 <ul class="footer-navigation">
                     {{--<li class="footer-navigation-li"> <a href="/sitemap">Site Map</a></li>--}}
-                    <li class="footer-navigation-li"> <a href="/about">About</a></li>
+                    {{--<li class="footer-navigation-li"> <a href="/about">About</a></li>--}}
                     <li class="footer-navigation-li"> <a href="/terms">Terms</a></li>
                     <li class="footer-navigation-li"><a href="https://www.facebook.com/AskExpert.Co/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <li class="footer-navigation-li"><a href="https://twitter.com/askexpert_co" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>

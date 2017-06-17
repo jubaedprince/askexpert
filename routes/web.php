@@ -54,6 +54,7 @@ Route::get('/expert/', 'ExpertController@index');
 Route::get('/service/', 'ServiceController@index');
 
 Route::get('/contact/', 'PagesController@contact');
+Route::get('/terms/', 'PagesController@terms');
 
 Route::get('/{expert_slug}', 'ExpertController@profile');
 

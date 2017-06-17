@@ -69,8 +69,8 @@ class ExpertController extends Controller
             ]
         );
         $user->expert()->save($expert);
-
-        Mail::to(env('ADMIN_EMAIL', 'jubaedprince@gmail.com'))->to('jubaedprince@gmail.com')->send(new ExpertJoined($expert));
+        $to = explode(',', env('ADMIN_EMAIL', 'zhossain99@gmail.com,jubaedprince@gmail.com'));
+        Mail::to($to)->send(new ExpertJoined($expert));
 
         return view('expert.registration_confirmation');
     }

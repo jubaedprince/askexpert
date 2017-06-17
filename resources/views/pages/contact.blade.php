@@ -26,7 +26,7 @@
                 <div class="well  well-contact">
                     <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
                     <h4>Email</h4>
-                    <p>hello@askexpert.com</p>
+                    <p>hello@askexpert.co</p>
                 </div>
             </div>
             <div class="col-md-6">

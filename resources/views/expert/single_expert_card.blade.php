@@ -4,7 +4,7 @@
     <a href="/{{$expert->slug}}">
         <div class="expert-name">{{$expert->user->name}}</div>
     </a>
-    <a href="/{{$expert->slug}}"><div class="expert-title"><p>{{$expert->current_occupation}}</p></div></a>
+    <a href="/{{$expert->slug}}"><div class="expert-title"><p>{{str_limit($expert->current_occupation, 60)}}</p></div></a>
     <a href="/{{$expert->slug}}"><div class="expert-caption">
         <p>
             {{str_limit($expert->bio, 350)}}
